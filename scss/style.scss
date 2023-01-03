@@ -1,0 +1,120 @@
+:root {
+  --m-bg-color: #815854;
+  --s-bg-color: #f9ebde;
+  --m-text-color: #f9ebde;
+  --s-text-color: #815854;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+}
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background: var(--m-bg-color);
+  gap: 2rem;
+}
+.s-txt-color {
+  color: var(--s-text-color);
+}
+.m-txt-color {
+  color: var(--m-text-color);
+}
+.container {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--m-bg-color);
+    h1 {
+      font-size: clamp(3rem, 4vw, 5rem);
+      text-align: center;
+    }
+    input {
+      border-style: none;
+      border-radius: 0.75rem;
+      padding: 0.5rem 0.5rem;
+      width: clamp(200px, 30vw, 650px);
+      background-color: var(--s-bg-color);
+      color: var(--s-text-color);
+      font-family: inherit;
+      font-size: clamp(1rem, 2vw, 2rem);
+      text-decoration: none;
+      transition: all 0.35s ease-in;
+      &:focus {
+        outline: none;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+.todos {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  li {
+    font-family: inherit;
+    margin: 0.1rem 0;
+    padding: 0.5rem 1rem;
+    background: var(--s-bg-color);
+    border-radius: 0.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: clamp(200px, 30vw, 650px);
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    span {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      max-width: 80%;
+    }
+  }
+}
+.add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  label {
+    font-size: clamp(1rem, 2vw, 2rem);
+  }
+  input {
+    border-style: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    width: clamp(100px, 20vw, 450px);
+    background-color: var(--s-bg-color);
+    color: var(--s-text-color);
+    font-family: inherit;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-decoration: none;
+    transition: all 0.35s ease-in;
+    &:focus {
+      outline: none;
+      transform: scale(1.2);
+    }
+  }
+}
+.filtered {
+  display: none !important;
+}
